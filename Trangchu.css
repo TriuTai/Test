@@ -1,0 +1,246 @@
+/* ----code chung cho tất cả các trang----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display:grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+header,main,footer{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+header{ 
+    grid-area: header;
+    margin-top: 2px;
+}
+/*----------------sdt dau trang-----------*/
+.box_lienhe{
+    height: 60px;
+    background-color: #f3f3f3;
+    width: 100%;
+    padding: 10px 40px;
+}
+.lienhe{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    line-height: 42px;
+    float: right;
+
+}
+.fa-phone{
+    animation: anim_phone 1s infinite alternate;
+}
+@keyframes anim_phone{
+    0% {transform:rotate(0deg)}
+    50%{transform:rotate(15deg)}
+    100%{transform:rotate(-15deg)}
+}
+/*-----------------logo-taikhoan-giohang------------*/
+.logo_other{
+    width: 100%;
+    text-align: center;
+    line-height: 100%;
+    position: relative;
+}
+.other{
+    display: flex;
+    position: absolute;
+    right: 2cm;
+    width: 15%;
+    top: 50%;
+    justify-content: space-between;
+}
+.logo_other li{
+    list-style: none;
+    font-size: 30px;
+    float: right;
+}
+/*-----------thanh lua chon--------------*/
+.thanh_chon{
+    padding: 10px;
+    width: 100%;
+}
+.thanh_chon div{
+    margin: 0 10px;
+    float: left;
+    min-width: 15.5%; 
+    text-align: center;
+}
+.thanh_chon a{
+    color: black;
+    text-decoration: none;
+}
+.thanh_chon a:hover{
+    color: red;
+}
+/*---------------giuatrang----------------- */
+main{
+    grid-area: "main";
+    margin-top: 2px;
+}
+/*---------------chan trang-----------------*/
+footer{
+    grid-area: footer;
+    display:grid;
+    grid-template-areas: "left main right";
+    grid-template-columns: 1fr 2fr 2fr;
+    min-height: 300px;
+    margin-top: 2px;
+}
+/**********sua chan trang**************/
+.logo{
+    grid-area: left;
+    place-content: center;
+    text-align: center;
+}
+.in4_tv{}
+.in4_tv a{
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    left: 40%;
+    top: 10%;
+    margin: 20px;
+}
+/*-------------trên là code chung cho tất cả các tràn------------ */
+/*-------Đăng nhập---------- */
+.custom-hr {
+    border: none; 
+    border-top: 3px solid black;
+    width: 7.5cm; 
+    margin: 8px auto auto 240px; 
+  }
+.quenmatkhau a {
+    font-size: 14px;
+    font-family: serif;
+    color: #252A2B;
+    text-decoration: none;
+}
+.othersign{
+    padding-top: 30px;
+
+}
+.othersign img{
+    width: 50px;
+}
+.Layeraccount{
+    width: 100%;
+    display: flex;
+}
+.title{
+    padding-top: 140px; 
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.userbox{
+    float: right;
+    width: 50%;
+    text-align: center;    
+}
+/*******************Tai code**********************************/
+
+/*---------------------------------------Trang chu-----------------------*/
+/***************************quang cao**************************/
+#arrow_right,#arrow_left{
+    position: absolute;
+    font-size: 40px;
+    line-height: 402px;
+    z-index: 10;
+    cursor: pointer;
+    }
+    .quang_cao {
+        margin: 10px 0;
+        position: relative;
+        width: 100%;
+        height:800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .quang_cao img{
+        width: 100%;
+        opacity: 0;
+        position: absolute;
+        transition: opacity 0.5s ease;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+    }
+    .quang_cao img.active {
+        opacity: 1;
+    }
+    /*---------------------------------------sp moiw------------------------------*/
+    .sp_moi{
+        margin-top: 30px;
+        text-align: center;
+    }
+    #sp_moi{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 50px;
+        padding:30px;
+    }
+    #sp_moi h3:hover{
+        color: red;
+    }
+    #sp_moi>div{
+        background-color: beige;
+        border: 1px solid rgba(187, 209, 154, 0.336);
+        text-align: center;
+        cursor: pointer;
+    }
+    #sp_moi div img{
+        width: 100%;
+    }
+    #sp_moi h3{
+        height: 50px;
+        padding: 0 25px;
+    }
+/*-------------------nhan thong tin qua email----------------*/
+.nhan_thong_tin_qua_email{
+    display: grid;
+    width: 100%;
+    height: 70px;
+    background-color:yellowgreen;
+    place-items: center;
+}
+.nhan_thong_tin_qua_email>div{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+.trai_{
+    align-items: center;
+    width: 300px;
+}
+.nhan_thong_tin_qua_email>div>div{
+    margin: 0 20px;
+    display: flex;
+}
+.box_nhap_email{
+    width: 100%;
+    height: 30px;
+}
+.box_nhap_email>input{
+    width: 100%;
+    position: relative;
+    padding-left: 10px;
+}
+.box_nhap_email button{
+    width: 80px;
+    border-radius: 0;
+    background-color: red;
+    color: white;
+}
+/*******************************************************************/    
